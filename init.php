@@ -1,6 +1,5 @@
 <?php
 class Nginx_Xaccel extends Plugin {
-	private $host;
 
 	function about() {
 		return array(1.0,
@@ -11,8 +10,6 @@ class Nginx_Xaccel extends Plugin {
 	}
 
 	function init($host) {
-		$this->host = $host;
-
 		Config::add("NGINX_XACCEL_PREFIX", "/tt-rss");
 
 		$host->add_hook($host::HOOK_SEND_LOCAL_FILE, $this);
