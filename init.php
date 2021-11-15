@@ -36,6 +36,8 @@ class Nginx_Xaccel extends Plugin {
 
 			return true;
 		}
+
+		return false;
 	}
 
 	function api_version() {
